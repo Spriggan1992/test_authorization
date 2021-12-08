@@ -6,7 +6,7 @@ class PasswordState with _$PasswordState {
     required String phoneNumber,
     required String password,
     required bool isEnableBtn,
-    required bool isValid,
+    required bool isShowError,
     String? code,
     required AuthInfo authInfo,
   }) = _PasswordState;
@@ -14,7 +14,7 @@ class PasswordState with _$PasswordState {
         phoneNumber: '',
         password: '',
         isEnableBtn: false,
-        isValid: false,
+        isShowError: false,
         authInfo: AuthInfo.empty(),
       );
 }

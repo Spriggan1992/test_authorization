@@ -12,7 +12,6 @@ class PasswordScreen extends StatelessWidget {
   final String? code;
   const PasswordScreen({Key? key, required this.phoneNumber, this.code})
       : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -23,7 +22,7 @@ class PasswordScreen extends StatelessWidget {
           return ScreenContent(
             title: code == null ? "Введите пароль" : "Задате пароль",
             textFieldContent: PinCodeField(
-              isError: state.isValid,
+              isError: state.isShowError,
               onChanged: (value) => context
                   .read<PasswordBloc>()
                   .add(PasswordEvent.changedPassword(value)),

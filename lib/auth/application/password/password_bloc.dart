@@ -43,7 +43,9 @@ class PasswordBloc extends Bloc<PasswordEvent, PasswordState> {
         );
       },
       submittedPassword: (e) async* {
-        yield state.copyWith(isValid: e.password == state.authInfo.password);
+        final isShowError =
+            state.code != null ? false : e.password != state.authInfo.password;
+        yield state.copyWith(isShowError: isShowError);
       },
     );
   }

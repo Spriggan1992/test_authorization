@@ -688,14 +688,14 @@ class _$PasswordStateTearOff {
       {required String phoneNumber,
       required String password,
       required bool isEnableBtn,
-      required bool isValid,
+      required bool isShowError,
       String? code,
       required AuthInfo authInfo}) {
     return _PasswordState(
       phoneNumber: phoneNumber,
       password: password,
       isEnableBtn: isEnableBtn,
-      isValid: isValid,
+      isShowError: isShowError,
       code: code,
       authInfo: authInfo,
     );
@@ -710,7 +710,7 @@ mixin _$PasswordState {
   String get phoneNumber => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   bool get isEnableBtn => throw _privateConstructorUsedError;
-  bool get isValid => throw _privateConstructorUsedError;
+  bool get isShowError => throw _privateConstructorUsedError;
   String? get code => throw _privateConstructorUsedError;
   AuthInfo get authInfo => throw _privateConstructorUsedError;
 
@@ -728,7 +728,7 @@ abstract class $PasswordStateCopyWith<$Res> {
       {String phoneNumber,
       String password,
       bool isEnableBtn,
-      bool isValid,
+      bool isShowError,
       String? code,
       AuthInfo authInfo});
 
@@ -749,7 +749,7 @@ class _$PasswordStateCopyWithImpl<$Res>
     Object? phoneNumber = freezed,
     Object? password = freezed,
     Object? isEnableBtn = freezed,
-    Object? isValid = freezed,
+    Object? isShowError = freezed,
     Object? code = freezed,
     Object? authInfo = freezed,
   }) {
@@ -766,9 +766,9 @@ class _$PasswordStateCopyWithImpl<$Res>
           ? _value.isEnableBtn
           : isEnableBtn // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValid: isValid == freezed
-          ? _value.isValid
-          : isValid // ignore: cast_nullable_to_non_nullable
+      isShowError: isShowError == freezed
+          ? _value.isShowError
+          : isShowError // ignore: cast_nullable_to_non_nullable
               as bool,
       code: code == freezed
           ? _value.code
@@ -800,7 +800,7 @@ abstract class _$PasswordStateCopyWith<$Res>
       {String phoneNumber,
       String password,
       bool isEnableBtn,
-      bool isValid,
+      bool isShowError,
       String? code,
       AuthInfo authInfo});
 
@@ -824,7 +824,7 @@ class __$PasswordStateCopyWithImpl<$Res>
     Object? phoneNumber = freezed,
     Object? password = freezed,
     Object? isEnableBtn = freezed,
-    Object? isValid = freezed,
+    Object? isShowError = freezed,
     Object? code = freezed,
     Object? authInfo = freezed,
   }) {
@@ -841,9 +841,9 @@ class __$PasswordStateCopyWithImpl<$Res>
           ? _value.isEnableBtn
           : isEnableBtn // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValid: isValid == freezed
-          ? _value.isValid
-          : isValid // ignore: cast_nullable_to_non_nullable
+      isShowError: isShowError == freezed
+          ? _value.isShowError
+          : isShowError // ignore: cast_nullable_to_non_nullable
               as bool,
       code: code == freezed
           ? _value.code
@@ -864,7 +864,7 @@ class _$_PasswordState implements _PasswordState {
       {required this.phoneNumber,
       required this.password,
       required this.isEnableBtn,
-      required this.isValid,
+      required this.isShowError,
       this.code,
       required this.authInfo});
 
@@ -875,7 +875,7 @@ class _$_PasswordState implements _PasswordState {
   @override
   final bool isEnableBtn;
   @override
-  final bool isValid;
+  final bool isShowError;
   @override
   final String? code;
   @override
@@ -883,7 +883,7 @@ class _$_PasswordState implements _PasswordState {
 
   @override
   String toString() {
-    return 'PasswordState(phoneNumber: $phoneNumber, password: $password, isEnableBtn: $isEnableBtn, isValid: $isValid, code: $code, authInfo: $authInfo)';
+    return 'PasswordState(phoneNumber: $phoneNumber, password: $password, isEnableBtn: $isEnableBtn, isShowError: $isShowError, code: $code, authInfo: $authInfo)';
   }
 
   @override
@@ -896,7 +896,8 @@ class _$_PasswordState implements _PasswordState {
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality()
                 .equals(other.isEnableBtn, isEnableBtn) &&
-            const DeepCollectionEquality().equals(other.isValid, isValid) &&
+            const DeepCollectionEquality()
+                .equals(other.isShowError, isShowError) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.authInfo, authInfo));
   }
@@ -907,7 +908,7 @@ class _$_PasswordState implements _PasswordState {
       const DeepCollectionEquality().hash(phoneNumber),
       const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(isEnableBtn),
-      const DeepCollectionEquality().hash(isValid),
+      const DeepCollectionEquality().hash(isShowError),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(authInfo));
 
@@ -922,7 +923,7 @@ abstract class _PasswordState implements PasswordState {
       {required String phoneNumber,
       required String password,
       required bool isEnableBtn,
-      required bool isValid,
+      required bool isShowError,
       String? code,
       required AuthInfo authInfo}) = _$_PasswordState;
 
@@ -933,7 +934,7 @@ abstract class _PasswordState implements PasswordState {
   @override
   bool get isEnableBtn;
   @override
-  bool get isValid;
+  bool get isShowError;
   @override
   String? get code;
   @override
